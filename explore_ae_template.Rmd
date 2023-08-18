@@ -1,0 +1,39 @@
+---
+title: "PRO-CTCAE QOL Sankey Diagrams"
+date: '`r Sys.Date()`'
+params:
+  plots: NA
+output: 
+  pdf_document: 
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, out.width = '100%', fig.align = 'center')
+
+library(tidyverse)
+```
+
+\newpage
+
+```{r, fig.width=5, fig.height=14, results = 'asis'}
+
+res <- params$plots
+
+out <- imap_chr(res, \(out, title) {
+  
+  text <- glue::glue("## `r title`",
+                      "```{{r, fig.width=10, fig.height=12}}",
+                      "out$plot",
+                      "```", .sep = '\n\n')
+  
+  knitr::knit_child(text = text, envir = environment(),
+                    quiet = T)
+  
+})
+
+
+cat(out, sep = ' ')
+
+```
+
