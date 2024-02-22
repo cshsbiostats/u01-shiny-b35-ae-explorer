@@ -3,6 +3,7 @@ library(shiny)
 library(bslib)
 library(ggsankey)
 library(patchwork)
+library(bsicons)
 
 data <- read_csv(here::here('data/u01_b35_data.csv'),
                  show_col_types = FALSE)
@@ -19,7 +20,14 @@ main <- layout_sidebar(
   sidebar = sidebar(
     selectizeInput(
       'select_ae',
-      '1. Select Adverse Event',
+      tooltip(
+        span(
+          "1. Select Adverse Events",
+          bs_icon("info-circle")
+        ),
+        "Please select from the drop down the treatment to visualize AE data.",
+        placement = "right"
+      ),
       choices = ae_options,
       multiple = T,
       options = list(placeholder = 'Select an Adverse Event')
