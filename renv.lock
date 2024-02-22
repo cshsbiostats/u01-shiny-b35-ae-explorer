@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.2.2",
+    "Version": "4.3.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -168,6 +168,20 @@
         "tidyr"
       ],
       "Hash": "fd25391c3c4f6ecf0fa95f1e6d15378c"
+    },
+    "bsicons": {
+      "Package": "bsicons",
+      "Version": "0.1.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cli",
+        "htmltools",
+        "rlang",
+        "utils"
+      ],
+      "Hash": "d8f892fbd94d0b9b1f6d688b05b8633c"
     },
     "bslib": {
       "Package": "bslib",
@@ -1376,7 +1390,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.7.5",
+      "Version": "1.8.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1406,7 +1420,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "438b99792adbe82a8329ad8697d45afe"
+      "Hash": "3a1f41807d648a908e3c7f0334bf85e6"
     },
     "snakecase": {
       "Package": "snakecase",
