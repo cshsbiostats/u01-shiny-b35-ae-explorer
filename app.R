@@ -34,16 +34,12 @@ main <- layout_sidebar(
       'Download Report',
       icon = icon(name = 'chart-bar', lib = 'font-awesome')
     )
-    # actionButton(
-    #   'btn_download_r',
-    #   'Downloard R Results',
-    #   icon = icon(name = 'chart-bar', lib = 'font-awesome')
-    # )
   ),
   uiOutput('sankey_plots')
 )
 
 ui <- page_fillable(
+  theme = bslib::bs_theme(preset = 'shiny'),
   main
 )
 
