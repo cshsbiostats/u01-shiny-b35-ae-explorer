@@ -25,7 +25,7 @@ main <- layout_sidebar(
           "1. Select Adverse Events",
           bs_icon("info-circle")
         ),
-        "Please select from the drop down the treatment to visualize AE data.",
+        "The following contains a list of adverse events that are present in both treatment arms. Select one or more adverse events to visualize the flow of patients between grades for each treatment arm.",
         placement = "right"
       ),
       choices = ae_options,
@@ -97,7 +97,7 @@ shinyApp(ui, function(input, output) {
         params = list('plots' = plots()),
         envir = new.env(parent = globalenv())
       )
-
+      
     }
   )
 
