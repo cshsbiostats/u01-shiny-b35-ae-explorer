@@ -34,12 +34,26 @@ main <- layout_sidebar(
     ),
     actionButton(
       'btn_ae_visualize',
-      'Visualize',
+      tooltip(
+        span(
+          "Visualize",
+          bs_icon("info-circle")
+        ),
+        "Clicking on the following button will generate a Sankey diagram for each selected adverse event.",
+        placement = "right"
+      ),
       icon = icon(name = 'chart-bar', lib = 'font-awesome')
     ),
     downloadButton(
       'report',
-      'Download Report',
+      tooltip(
+        span(
+          "Download Report",
+          bs_icon("info-circle")
+        ),
+        "Clicking on the following button will generate a PDF report containing the Sankey diagrams for each selected adverse event.",
+        placement = "right"
+      ),
       icon = icon(name = 'chart-bar', lib = 'font-awesome')
     )
   ),
