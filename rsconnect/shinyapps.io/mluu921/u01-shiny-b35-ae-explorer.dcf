@@ -5,7 +5,7 @@ account: mluu921
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 9611509
-bundleId: 8335420
+bundleId: 8337145
 url: https://mluu921.shinyapps.io/u01-shiny-b35-ae-explorer/
 version: 1
 asMultiple: FALSE

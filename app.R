@@ -62,14 +62,14 @@ main <- layout_sidebar(
     card_body(
       "The following application allows you to visualize the flow of patients between grades for each treatment arm. Select one or more adverse events from the dropdown menu and click on the 'Visualize' button to generate a Sankey diagram for each selected adverse event. The 'Download Report' button will generate a PDF report containing the Sankey diagrams for each selected adverse event."
     ),
-    max_height = '200px'
+    max_height = '250px'
   ),
   card(
     card_header('Results'),
     card_body(
       uiOutput('sankey_plots')
     ),
-    height = '800px'
+    height = '750px'
   )
 )
 
